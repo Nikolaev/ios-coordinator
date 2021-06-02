@@ -1,6 +1,6 @@
 import UIKit
 
-public class NavigationCoordinator: Coordinator<UINavigationController> {
+open class NavigationCoordinator: Coordinator<UINavigationController> {
     
     public func push(_ viewController: UIViewController, animated: Bool = true) {
         container.pushViewController(viewController, animated: animated)

@@ -4,7 +4,7 @@ public protocol CoordinatorProtocol {
     func isEqual(to other: CoordinatorProtocol) -> Bool
 }
 
-public class Coordinator<T: UIResponder>: Hashable, CoordinatorProtocol {
+open class Coordinator<T: UIResponder>: Hashable, CoordinatorProtocol {
     
     weak private var container_: T?
     
@@ -23,7 +23,7 @@ public class Coordinator<T: UIResponder>: Hashable, CoordinatorProtocol {
         container.addCoordinator(self)
     }
     
-    public func start() {
+    open func start() {
         assertionFailure("Coordinator must override start method")
     }
     

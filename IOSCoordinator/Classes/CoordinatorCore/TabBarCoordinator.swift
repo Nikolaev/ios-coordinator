@@ -1,6 +1,6 @@
 import UIKit
 
-public class TabBarCoordinator: Coordinator<UITabBarController> {
+open class TabBarCoordinator: Coordinator<UITabBarController> {
     
     public func set(_ viewControllers: [UIViewController], animated: Bool = false) {
         self.container.setViewControllers(viewControllers, animated: animated)

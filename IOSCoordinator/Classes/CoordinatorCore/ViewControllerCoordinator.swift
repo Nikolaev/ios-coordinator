@@ -1,6 +1,6 @@
 import UIKit
 
-public class ViewControllerCoordinator: Coordinator<UIViewController> {
+open class ViewControllerCoordinator: Coordinator<UIViewController> {
     
     public func addSubview(_ view: UIView) {
         container.view.addSubview(view)
