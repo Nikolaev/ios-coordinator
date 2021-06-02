@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '12.0'
+
+target 'IOSCoordinator_Example' do
+  pod 'IOSCoordinator', :path => '../'
+
+  target 'IOSCoordinator_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick'
+    pod 'Nimble'
+  end
+end

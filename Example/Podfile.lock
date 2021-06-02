@@ -1,0 +1,27 @@
+PODS:
+  - IOSCoordinator (0.1.0)
+  - Nimble (9.2.0)
+  - Quick (4.0.0)
+
+DEPENDENCIES:
+  - IOSCoordinator (from `../`)
+  - Nimble
+  - Quick
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  IOSCoordinator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IOSCoordinator: 6b642d116b72bbfaa1563129a4a9039097d78bd9
+  Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+
+PODFILE CHECKSUM: ae74d5edaf9a7355497254e65fe2a2929d32a1d4
+
+COCOAPODS: 1.10.1
