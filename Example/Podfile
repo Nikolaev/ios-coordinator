@@ -4,11 +4,27 @@ platform :ios, '12.0'
 
 target 'IOSCoordinator_Example' do
   pod 'IOSCoordinator', :path => '../'
-
+  pod 'RxCocoa', '~> 6'
+  pod 'RxSwift', '~> 6'
+  
   target 'IOSCoordinator_Tests' do
     inherit! :search_paths
 
     pod 'Quick'
     pod 'Nimble'
   end
+end
+
+post_install do |installer|
+  
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings["ONLY_ACTIVE_ARCH"] = "YES"
+    end
+  end
+  
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = %w(arm64)
+  end
+  
 end

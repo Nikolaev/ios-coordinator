@@ -2,26 +2,40 @@ PODS:
   - IOSCoordinator (0.1.0)
   - Nimble (9.2.0)
   - Quick (4.0.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
 
 DEPENDENCIES:
   - IOSCoordinator (from `../`)
   - Nimble
   - Quick
+  - RxCocoa (~> 6)
+  - RxSwift (~> 6)
 
 SPEC REPOS:
   trunk:
     - Nimble
     - Quick
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 EXTERNAL SOURCES:
   IOSCoordinator:
     :path: "../"
 
 SPEC CHECKSUMS:
-  IOSCoordinator: 6b642d116b72bbfaa1563129a4a9039097d78bd9
+  IOSCoordinator: a39ba7fcb29b2e887936128a96f36b98c1d38835
   Nimble: 4f4a345c80b503b3ea13606a4f98405974ee4d0b
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: ae74d5edaf9a7355497254e65fe2a2929d32a1d4
+PODFILE CHECKSUM: 87e520503ecd9085acb1bbb62b1ba0281bca5a4b
 
 COCOAPODS: 1.10.1
