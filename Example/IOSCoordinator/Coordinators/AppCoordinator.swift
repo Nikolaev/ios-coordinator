@@ -30,7 +30,7 @@ private extension AppCoordinator {
         let coord = AuthCoordinator(container: container)
         coord.output.done
             .subscribe(onNext: { [weak coord, weak self] in
-                self?.container.removeCoordinator(coord)
+                self?.removeChild(coordinator: coord)
                 self?.presentMain()
             }).disposed(by: bag)
         coord.start()
@@ -39,7 +39,7 @@ private extension AppCoordinator {
     func presentMain() {
         let coord = MainCoordinator(container: UITabBarController())
         coord.output.logout.subscribe(onNext: { [weak coord, weak self] in
-            self?.container.removeCoordinator(coord)
+            self?.removeChild(coordinator: coord)
             self?.presentAuth()
         }).disposed(by: bag)
         set([coord.container])

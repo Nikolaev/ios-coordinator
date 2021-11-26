@@ -43,6 +43,20 @@ open class Coordinator<T: UIResponder>: Hashable, CoordinatorProtocol {
         return self == other
     }
     
+    public func addChild(coordinator: CoordinatorProtocol) {
+        guard let container_ = container_ else {
+            return
+        }
+        container_.addCoordinator(coordinator)
+    }
+    
+    public func removeChild(coordinator: CoordinatorProtocol?) {
+        guard let container_ = container_ else {
+            return
+        }
+        container_.removeCoordinator(coordinator)
+    }
+    
 }
 
 public extension Coordinator {
